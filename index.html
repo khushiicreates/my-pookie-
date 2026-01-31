@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f7efe8;
+  color:#3a2f2f;
+  text-align:center;
+  line-height:1.8;
+}
+section{
+  max-width:820px;
+  margin:auto;
+  padding:70px 20px;
+}
+h1,h2{
+  font-family:'Playfair Display',serif;
+}
+h1{font-size:2.6rem;}
+h2{font-size:2rem;margin-bottom:20px;}
+.divider{
+  width:70px;
+  height:2px;
+  background:#b76e79;
+  margin:0 auto;
+}
+.gallery img{
+  width:100%;
+  max-width:240px;
+  border-radius:14px;
+  margin:10px;
+}
+button{
+  background:#b76e79;
+  color:#fff;
+  border:none;
+  padding:12px 28px;
+  border-radius:30px;
+  margin:10px;
+  font-size:1rem;
+  cursor:pointer;
+}
+button:hover{background:#9f5b65;}
+footer{
+  padding:40px;
+  font-size:0.9rem;
+}
+.modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.4);
+}
+.modal-content{
+  background:#fff;
+  max-width:500px;
+  margin:15% auto;
+  padding:30px;
+  border-radius:16px;
+}
+.close{
+  cursor:pointer;
+  font-size:1.2rem;
+  float:right;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <h1>Hi love.</h1>
+  <p>I wanted to do something different this time.</p>
+  <p>Something that lasts longer than flowers and chocolates.</p>
+  <p><strong>Happy 4 months & Valentine’s Day ❤️</strong><br>
+  This little corner of the internet is just for you.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Why you.</h2>
+  <p>I like the way you care quietly.</p>
+  <p>I like how you listen—even when I talk too much.</p>
+  <p>I like how being with you feels easy and safe.</p>
+  <p>You’ve become my comfort, my favourite person,
+     and someone I’m truly grateful for.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Us.</h2>
+  <div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+  <p><em>Little moments. Big feelings.</em></p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Songs that feel like us.</h2>
+  <p>Some remind me of you.</p>
+  <p>Some remind me of us.</p>
+  <p>Some say what I don’t always know how to.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>How we got here.</h2>
+  <p>The day we started talking</p>
+  <p>The moment I realized I liked you</p>
+  <p>The laughs, the little fights, the staying</p>
+  <p><strong>Four months later — still choosing you ❤️</strong></p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Open when…</h2>
+  <button onclick="openModal('miss')">You miss me</button>
+  <button onclick="openModal('sad')">You’re sad</button>
+  <button onclick="openModal('doubt')">You doubt yourself</button>
+  <button onclick="openModal('happy')">You’re happy</button>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>One last thing.</h2>
+  <p>Thank you for choosing me.</p>
+  <p>Thank you for these four months.</p>
+  <p>This website is just a small reflection of what you mean to me.</p>
+  <p><strong>Happy Valentine’s ❤️</strong></p>
+</section>
+
+<footer>— yours</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+function openModal(type){
+  const text={
+    miss:"I’m probably missing you too. Close your eyes and remember how it feels when we’re together. You’re not alone ❤️",
+    sad:"You don’t have to be strong all the time. I’m here. Always. And I believe in you more than you know.",
+    doubt:"You are kind. You are enough. And you are deeply loved.",
+    happy:"Come tell me. I want to celebrate you every single time ❤️"
+  };
+  document.getElementById("modalText").innerText=text[type];
+  document.getElementById("modal").style.display="block";
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>
